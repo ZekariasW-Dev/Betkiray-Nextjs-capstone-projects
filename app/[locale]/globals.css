@@ -158,12 +158,15 @@ html[lang="tg"] h1,html[lang="tg"] h2,html[lang="tg"] h3,html[lang="tg"] h4 { fo
 /* Search panel sits inside hero — white card treatment */
 .home-hero-search {
   width: min(100%, 840px);
-  padding: 14px 16px;
-  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 10px;
   background: rgba(255,255,255,.97);
-  box-shadow: 0 16px 48px rgba(6,18,10,.38);
+  box-shadow: 0 18px 48px rgba(6,18,10,.3);
+  backdrop-filter: blur(12px);
 }
 .home-hero-search .search-panel {
+  display: grid;
   grid-template-columns: minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.1fr) auto;
   gap: 0;
   padding: 0;
@@ -171,8 +174,8 @@ html[lang="tg"] h1,html[lang="tg"] h2,html[lang="tg"] h3,html[lang="tg"] h4 { fo
   border-radius: 0;
   box-shadow: none;
 }
-.home-hero-search .search-segment { min-height: 49px; }
-.home-hero-search .search-submit { min-height: 46px; }
+.home-hero-search .search-segment { min-height: 52px; }
+.home-hero-search .search-submit.ui-button { min-height: 46px; border-radius: 7px; }
 .home-hero-trust {
   display: flex;
   flex-wrap: wrap;
@@ -336,8 +339,8 @@ html[lang="tg"] h1,html[lang="tg"] h2,html[lang="tg"] h3,html[lang="tg"] h4 { fo
   .home-hero { height: auto; padding: 64px 0 56px; }
   .home-hero-headline { font-size: clamp(38px,7vw,52px); }
   .home-hero-sub { font-size: 14px; }
-  .home-hero-search .search-panel { grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 8px; }
-  .home-hero-search .search-submit { grid-column: span 2; }
+  .home-hero-search .search-panel { grid-template-columns: repeat(3, minmax(0,1fr)); row-gap: 4px; }
+  .home-hero-search .search-submit.ui-button { grid-column: 1 / -1; }
   .home-spotlight { grid-template-columns: 1fr; margin-top: 28px; }
   .spotlight-image { min-height: 240px; }
   .spotlight-copy { padding: 24px 20px; }
@@ -353,7 +356,7 @@ html[lang="tg"] h1,html[lang="tg"] h2,html[lang="tg"] h3,html[lang="tg"] h4 { fo
   .home-hero-search .search-panel { grid-template-columns: 1fr; gap: 0; }
   .home-hero-search .search-segment { min-height: 54px; border-right: 0; border-bottom: 1px solid #e9ebe7; }
   .home-hero-search .search-segment-price { border-bottom: 0; }
-  .home-hero-search .search-submit { grid-column: auto; min-height: 46px; margin-top: 6px; }
+  .home-hero-search .search-submit.ui-button { grid-column: auto; min-height: 46px; margin-top: 6px; }
   .home-hero-trust { gap: 6px 14px; font-size: 10px; }
   .neighborhood-cards { grid-template-columns: 1fr; }
   .neighborhood-card { min-height: 200px; }
